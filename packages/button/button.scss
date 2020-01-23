@@ -7,12 +7,12 @@
   overflow: hidden;
   outline: none;
   cursor: pointer;
-
-  > .mca-icon {
-    vertical-align: middle;
-  }
   
-  &--contained, &--text { border: none; }
+  &--contained,
+  &--text,
+  &--toggle {
+    border: none;
+  }
 
   &--outlined, &--text { background: none; }
   
@@ -46,7 +46,8 @@
   }
 
   &--toggle {
-    @include mca-button-state(on-secondary);
+    @include mca-button-state(on-surface);
+    @include mca-theme-color-var(background-color, surface);
     width: $mca-button--toggle-size;
     height: $mca-button--toggle-size;
   }

@@ -52,16 +52,13 @@ storiesOf('Button', module)
   .add('Toggle Button', () => `
     <section>
       <button class="${spaces('mca-button', 'mca-button--toggle')}">
-        <span class="mca-button__label">BUTTON</span>
+        <i class="material-icons mca-icon">format_align_justify</i>
       </button>
       <button class="${spaces('mca-button', 'mca-button--toggle')}">
-        <i class="material-icons mca-icon--dense">grade</i><!--
-     --><span class="mca-button__label">BUTTON</span>
+        <i class="material-icons mca-icon">format_align_left</i>
       </button>
       <button class="${spaces('mca-button', 'mca-button--toggle')}">
-        <span class="mca-button__label">BUTTON</span><!--
-     --><i class="material-icons mca-icon--dense">grade</i>
+        <i class="material-icons mca-icon">format_align_right</i>
       </button>
     </section>
-  `)
-  
+  `);  

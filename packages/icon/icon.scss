@@ -1,13 +1,14 @@
+@import "./mixin";
 @import "./variable";
 
 .mca-icon {
-  display: inline-block;
+  @include mca-icon-reset-style;
   width: $mca-icon-size;
   height: $mca-icon-size;
   font-size: $mca-icon-size;
 
   &--dense {
-    @extend .mca-icon;
+    @include mca-icon-reset-style;
     width: $mca-icon-size--dense;
     height: $mca-icon-size--dense;
     font-size: $mca-icon-size--dense;
