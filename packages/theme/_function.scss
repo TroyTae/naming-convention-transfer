@@ -26,8 +26,8 @@
   }
 }
 
-@function mac-theme-tone-opacity($tone) {
-  @if ($tone) {
+@function mca-theme-tone-opacity($tone) {
+  @if ($tone == "light") {
     @return $mca-theme-light-tone-opacity;
   } @else {
     @return $mca-theme-dark-tone-opacity;

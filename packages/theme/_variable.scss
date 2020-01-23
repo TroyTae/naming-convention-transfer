@@ -13,22 +13,24 @@ $mca-theme-on-error: #FFFFFF !default;
 
 $mca-theme-dark-tone-opacity: (
   enabled: 0,
-  hover: 0.04,
-  focus: 0.12,
-  selected: 0.08,
-  activated: 0.12,
-  pressed: 0.16,
-  dragged: 0.08
+  hover: .04,
+  focus: .12,
+  selected: .08,
+  activated: .12,
+  pressed: .16,
+  dragged: .08,
+  disabled: .38
 ) !default;
 
 $mca-theme-light-tone-opacity: (
   enabled: 0,
-  hover: 0.08,
-  focus: 0.24,
-  selected: 0.16,
-  activated: 0.24,
-  pressed: 0.32,
-  dragged: 0.16
+  hover: .08,
+  focus: .24,
+  selected: .16,
+  activated: .24,
+  pressed: .32,
+  dragged: .16,
+  disabled: .38
 ) !default;
 
 $mca-theme-linear-channels:

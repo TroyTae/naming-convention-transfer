@@ -3,25 +3,32 @@
 @import '../theme/function';
 
 @mixin mca-button-state($color) {
-  $theme-tone-opacity: mac-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
-  &::after {
-    transition: opacity 150ms $mca-motion-standard-timing-function;
-    position: absolute;
-    content: '';
-    top: -$mca-button-border-width;
-    left: -$mca-button-border-width;
-    width: calc(100% + #{$mca-button-border-width * 2});
-    height: calc(100% + #{$mca-button-border-width * 2});
-    opacity: map-get($theme-tone-opacity, enabled);
-    @include mca-theme-color-var(background-color, $color);
+  $theme-tone-opacity: mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
+
+  &:disabled {
+    opacity: map-get($theme-tone-opacity, disabled);
   }
-  &:hover::after {
-    opacity: map-get($theme-tone-opacity, hover);
-  }
-  &:focus::after {
-    opacity: map-get($theme-tone-opacity, focus);
-  }
-  &:active::after {
-    opacity: map-get($theme-tone-opacity, pressed);
+  
+  &:enabled {
+    &::after {
+      transition: opacity 150ms $mca-motion-standard-timing-function;
+      position: absolute;
+      content: '';
+      top: -$mca-button-border-width;
+      left: -$mca-button-border-width;
+      width: calc(100% + #{$mca-button-border-width * 2});
+      height: calc(100% + #{$mca-button-border-width * 2});
+      opacity: map-get($theme-tone-opacity, enabled);
+      @include mca-theme-color-var(background-color, $color);
+    }
+    &:hover::after {
+      opacity: map-get($theme-tone-opacity, hover);
+    }
+    &:focus::after {
+      opacity: map-get($theme-tone-opacity, focus);
+    }
+    &:active::after {
+      opacity: map-get($theme-tone-opacity, pressed);
+    }
   }
 }

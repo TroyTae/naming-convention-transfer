@@ -5,7 +5,8 @@
 .mca-button {
   position: relative;
   outline: none;
-  cursor: pointer;
+
+  &:enabled { cursor: pointer; }
   
   &--contained, &--text, &--toggle {
     border: none;

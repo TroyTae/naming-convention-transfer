@@ -9,6 +9,10 @@ storiesOf('Button', module)
     <button class="${spaces('mca-button', 'mca-button--contained')}">
       <span class="mca-button__label">BUTTON</span>
     </button>
+    <h1>Disabled</h1>
+    <button disabled class="${spaces('mca-button', 'mca-button--contained')}">
+      <span class="mca-button__label">BUTTON</span>
+    </button>
     <h1>Leading Icon</h1>
     <button class="${spaces('mca-button', 'mca-button--contained')}">
       <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
@@ -25,6 +29,10 @@ storiesOf('Button', module)
     <button class="${spaces('mca-button', 'mca-button--outlined')}">
       <span class="mca-button__label">BUTTON</span>
     </button>
+    <h1>Disabled</h1>
+    <button disabled class="${spaces('mca-button', 'mca-button--outlined')}">
+      <span class="mca-button__label">BUTTON</span>
+    </button>
     <h1>Leading Icon</h1>
     <button class="${spaces('mca-button', 'mca-button--outlined')}">
       <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
@@ -39,6 +47,10 @@ storiesOf('Button', module)
   .add('Text Button', () => `
     <h1>Basic</h1>
     <button class="${spaces('mca-button', 'mca-button--text')}">
+      <span class="mca-button__label">BUTTON</span>
+    </button>
+    <h1>Disabled</h1>
+    <button disabled class="${spaces('mca-button', 'mca-button--text')}">
       <span class="mca-button__label">BUTTON</span>
     </button>
     <h1>Leading Icon</h1>
@@ -58,7 +70,7 @@ storiesOf('Button', module)
       <button class="${spaces('mca-button', 'mca-button--toggle')}">
         <i class="${spaces('material-icons', 'mca-icon')}">format_align_justify</i>
       </button>
-      <button class="${spaces('mca-button', 'mca-button--toggle')}">
+      <button disabled class="${spaces('mca-button', 'mca-button--toggle')}">
         <i class="${spaces('material-icons', 'mca-icon')}">format_align_left</i>
       </button>
       <button class="${spaces('mca-button', 'mca-button--toggle')}">
