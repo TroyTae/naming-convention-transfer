@@ -20,7 +20,6 @@
     @include mca-theme-color-var(color, on-primary);
     @include mca-theme-color-var(background-color, primary);
     @include mca-button-state(on-primary);
-    @include mca-button-elevation();
     padding: 0 $mca-button--contained-vertical-padding;
   }
 
