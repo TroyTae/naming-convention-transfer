@@ -8,7 +8,6 @@
   font-size: $mca-icon-size;
 
   &--dense {
-    @extend .mca-icon;
     width: $mca-icon-size--dense;
     height: $mca-icon-size--dense;
     font-size: $mca-icon-size--dense;

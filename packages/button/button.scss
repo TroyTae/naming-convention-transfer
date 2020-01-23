@@ -4,101 +4,62 @@
 
 .mca-button {
   position: relative;
-  overflow: hidden;
-  background: none;
   outline: none;
-  cursor: pointer;
-  border: none;
-  padding: 0;
 
-  &--text, &--contained, &--outlined, &--toggle, &--fab {
-    @extend .mca-button;
+  &:enabled { cursor: pointer; }
+  
+  &--contained, &--text, &--toggle {
+    border: none;
   }
 
-  &--text, &--contained, &--outlined {
+  &--contained, &--outlined, &--text {
     height: $mca-button-height;
     min-width: $mca-button-min-width;
-    border-radius: $mca-button-border-radius;
-    > .mca-icon {
-      margin: 0 0 0 $mca-button__icon-spacing;
+    &, &::after {
+      border-radius: $mca-button-border-radius;
     }
-    > .mca-button__label {
-      margin: 0 $mca-button__label-vertical-margin;
-      + .mca-icon {
-        margin: 0 $mca-button__icon-spacing 0 0;
-      }
+    > .mca-icon {
+      margin-left: $mca-button__icon-outer-margin;
+      margin-right: $mca-button__icon-inner-margin;
+    }
+    > .mca-button__label + .mca-icon {
+      margin-left: $mca-button__icon-inner-margin;
+      margin-right: $mca-button__icon-outer-margin;
     }
   }
+  
+  &--contained {
+    padding: 0 $mca-button--contained-vertical-padding;
+    @include mca-theme-color-var(color, on-primary);
+    @include mca-theme-color-var(background-color, primary);
+    @include mca-button-state(on-primary);
+  }
 
-  &--text, &--outlined {
+  &--outlined, &--text {
+    background: none;
     @include mca-button-state(primary);
     @include mca-theme-color-var(color, primary);
   }
 
   &--outlined {
+    border: $mca-button-border-width solid;
+    padding: 0 $mca-button--outlined-vertical-padding;
     @include mca-theme-color-var(border-color, primary);
-    border-style: solid;
-    border-width: $mca-button-border-width;
-    padding: 0 #{$mca-button-vertical-padding - $mca-button-border-width};
   }
 
-  &--contained {
-    @include mca-theme-color-var(color, on-primary);
-    @include mca-theme-color-var(background-color, primary);
-    @include mca-button-state(on-primary);
-    @include mca-button-elevation();
-    padding: 0 $mca-button-vertical-padding;
+  &--text {
+    padding: 0 $mca-button--text-vertical-padding;
   }
 
   &--toggle {
-    @include mca-button-state(on-secondary);
     width: $mca-button--toggle-size;
     height: $mca-button--toggle-size;
-  }
-
-  &--fab {
-    @include mca-button-elevation(6, 8, 12);
-    @include mca-button-state(on-primary);
-    @include mca-theme-color-var(color, on-primary);
-    @include mca-theme-color-var(background-color, primary);
-
-    &--regular, &--dense, &--extend {
-      @extend .mca-button--fab;
-    }
-
-    &--regular {
-      width: $mca-button--fab-size;
-      height: $mca-button--fab-size;
-      border-radius: $mca-button--fab-size / 2;
-    }
-
-    &--dense {
-      width: $mca-button--fab--dense-size;
-      height: $mca-button--fab--dense-size;
-      border-radius: $mca-button--fab--dense-size / 2;
-    }
-
-    &--extend {
-      height: $mca-button--fab--extend-size;
-      padding: 0 $mca-button-vertical-padding;
-      border-radius: $mca-button--fab--extend-size / 2;
-
-      > .mca-icon {
-        margin: 0 0 0 $mca-button__icon-spacing;
-      }
-
-      > .mca-button__label {
-        margin: 0 $mca-button--fab--extend__label-vertical-margin;
-        + .mca-icon {
-          margin: 0 $mca-button__icon-spacing 0 0;
-        }
-      }
-    }
+    @include mca-button-state(on-surface);
+    @include mca-theme-color-var(background-color, surface);
   }
 
   &__label {
     vertical-align: middle;
-    font-family: Roboto, sans-serif;
     font-size: $mca-button__label-font-size;
   }
 }

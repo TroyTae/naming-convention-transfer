@@ -1,8 +1,8 @@
 $mca-elevation-umbra-opacity: .2 !default;
 $mca-elevation-penumbra-opacity: .14 !default;
-$mca-elevation-ambient-opacity: .12 !default;
+$mca-elevation-antumbra-opacity: .12 !default;
 
-$mca-elevation-umbra-map: (
+$mca-elevation-umbra-shadow: (
   0: "0px 0px 0px 0px",
   1: "0px 2px 1px -1px",
   2: "0px 3px 1px -2px",
@@ -30,7 +30,7 @@ $mca-elevation-umbra-map: (
   24: "0px 11px 15px -7px"
 ) !default;
 
-$mca-elevation-penumbra-map: (
+$mca-elevation-penumbra-shadow: (
   0: "0px 0px 0px 0px",
   1: "0px 1px 1px 0px",
   2: "0px 2px 2px 0px",
@@ -58,7 +58,7 @@ $mca-elevation-penumbra-map: (
   24: "0px 24px 38px 3px"
 ) !default;
 
-$mca-elevation-ambient-map: (
+$mca-elevation-antumbra-shadow: (
   0: "0px 0px 0px 0px",
   1: "0px 1px 3px 0px",
   2: "0px 1px 5px 0px",
