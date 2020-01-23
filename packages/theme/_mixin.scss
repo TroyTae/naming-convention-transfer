@@ -1,0 +1,6 @@
+@import "./function";
+
+@mixin mca-theme-color-var($prop, $color) {
+  #{$prop}: mca-theme-color($color);
+  #{$prop}: var(--mca-#{$color});
+}

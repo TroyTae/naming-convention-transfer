@@ -1,0 +1,42 @@
+@import "../motion/variable";
+@import "../theme/mixin";
+@import "../theme/function";
+@import "../theme/variable";
+@import "../theme/function";
+@import "../elevation/mixin";
+
+@mixin mca-button-elevation($z: 2, $z-hover: 4, $z-active: 8) {
+  transition: box-shadow 280ms $mca-motion-standard-timing-function;
+  @include mca-elevation($z);
+  &:hover {
+    @include mca-elevation($z-hover);
+  }
+  &:active {
+    @include mca-elevation($z-active);
+  }
+}
+
+@mixin mca-button-state($color) {
+  $tone: mca-theme-tone(mca-theme-color($color));
+  $opacity-map: if($tone == "light", $mca-theme-light-tone-opacity-map, $mca-theme-dark-tone-opacity-map);
+  &::after {
+    transition: opacity 150ms $mca-motion-standard-timing-function;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: map-get($opacity-map, enabled);
+    @include mca-theme-color-var(background-color, $color);
+  }
+  &:hover::after {
+    opacity: map-get($opacity-map, hover);
+  }
+  &:focus::after {
+    opacity: map-get($opacity-map, focus);
+  }
+  &:active::after {
+    opacity: map-get($opacity-map, pressed);
+  }
+}

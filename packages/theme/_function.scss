@@ -1,0 +1,55 @@
+@import "./variable";
+
+@function mca-theme-color($color) {
+  @if ($color == "primary") {
+    @return $mca-theme-primary;
+  } @else if($color == "primary-variant") {
+    @return $mca-theme-primary-variant;
+  } @else if($color == "secondary") {
+    @return $mca-theme-secondary;
+  } @else if($color == "secondary-variant") {
+    @return $mca-theme-secondary-variant;
+  } @else if($color == "background") {
+    @return $mca-theme-background;
+  } @else if($color == "surface") {
+    @return $mca-theme-surface;
+  } @else if($color == "error") {
+    @return $mca-theme-error;
+  } @else if($color == "on-primary") {
+    @return $mca-theme-on-primary;
+  } @else if($color == "on-secondary") {
+    @return $mca-theme-on-secondary;
+  } @else if($color == "on-background") {
+    @return $mca-theme-on-background;
+  } @else if($color == "on-surface") {
+    @return $mca-theme-on-surface;
+  } @else if($color == "on-error") {
+    @return $mca-theme-on-error;
+  }
+}
+
+@function mca-theme-luminance($color) {
+  $red: nth($mca-theme-linear-channel-values, red($color) + 1);
+  $green: nth($mca-theme-linear-channel-values, green($color) + 1);
+  $blue: nth($mca-theme-linear-channel-values, blue($color) + 1);
+
+  @return 0.2126 * $red + 0.7152 * $green + 0.0722 * $blue;
+}
+
+@function mca-theme-contrast($back, $front) {
+  $back-luminance: mca-theme-luminance($back) + 0.05;
+  $fore-luminance: mca-theme-luminance($front) + 0.05;
+
+  @return max($back-luminance, $fore-luminance) / min($back-luminance, $fore-luminance);
+}
+
+@function mca-theme-tone($color) {
+  $light-contrast: mca-theme-contrast($color, #FFFFFF);
+  $dark-contrast: mca-theme-contrast($color, rgba(#000000, 0.87));
+
+  @if ($light-contrast < 3.1) and ($light-contrast < $dark-contrast) {
+    @return "light";
+  } @else {
+    @return "dark";
+  }
+}

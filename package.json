@@ -1,0 +1,20 @@
+{
+  "name": "material-component-air",
+  "author": "Troy Tae",
+  "version": "0.0.0",
+  "main": "index.scss",
+  "scripts": {
+    "start": "start-storybook -p 7001",
+    "build": "build-storybook -o docs"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@storybook/html": "^5.3.8",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "node-sass": "^4.13.1",
+    "one-spaces": "^1.3.2",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3"
+  }
+}

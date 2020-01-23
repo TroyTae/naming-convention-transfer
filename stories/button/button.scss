@@ -1,0 +1,28 @@
+@import "../../packages/theme/theme";
+@import "../../packages/icon/icon";
+@import "../../packages/button/mixin";
+@import "../../packages/button/button";
+
+#crane-button {
+  --mca-primary: #5C1349;
+  .mca-button--outlined,
+  .mca-button--contained {
+    border-radius: $mca-button-height / 2;
+  }
+}
+#fortnightly-button {
+  --mca-primary: #661FFF;
+}
+#reply-button {
+  --mca-primary: #344955;
+}
+#shrine-button {
+  --mca-primary: #FEDBD0;
+  --mca-on-primary: #442C2E;
+
+  .mca-button {
+    color: var(--mca-on-primary);
+    border-color: var(--mca-on-primary);
+    @include mca-button-state(on-primary);
+  }
+}

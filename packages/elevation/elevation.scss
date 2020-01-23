@@ -1,0 +1,7 @@
+@import "./mixin";
+
+@for $z from 0 through 24 {
+  .mca-elevation-z#{$z} {
+    @include mca-elevation($z);
+  }
+}

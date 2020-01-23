@@ -1,0 +1,16 @@
+@import "./variable";
+
+:root {
+  --mca-primary: #{$mca-theme-primary};
+  --mca-primary-variant: #{$mca-theme-primary-variant};
+  --mca-secondary: #{$mca-theme-secondary};
+  --mca-secondary-variant: #{$mca-theme-secondary-variant};
+  --mca-background: #{$mca-theme-background};
+  --mca-surface: #{$mca-theme-surface};
+  --mca-error: #{$mca-theme-error};
+  --mca-on-primary: #{$mca-theme-on-primary};
+  --mca-on-secondary: #{$mca-theme-on-secondary};
+  --mca-on-background: #{$mca-theme-on-background};
+  --mca-on-surface: #{$mca-theme-on-surface};
+  --mca-on-error: #{$mca-theme-on-error};
+}
