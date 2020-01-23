@@ -4,57 +4,61 @@
 
 .mca-button {
   position: relative;
-  overflow: hidden;
   outline: none;
   cursor: pointer;
   
-  &--contained,
-  &--text,
-  &--toggle {
+  &--contained, &--text, &--toggle {
     border: none;
   }
 
-  &--outlined, &--text { background: none; }
+  &--contained, &--outlined, &--text {
+    height: $mca-button-height;
+    min-width: $mca-button-min-width;
+    &, &::after {
+      border-radius: $mca-button-border-radius;
+    }
+    > .mca-icon {
+      margin-left: $mca-button__icon-outer-margin;
+      margin-right: $mca-button__icon-inner-margin;
+    }
+    > .mca-button__label + .mca-icon {
+      margin-left: $mca-button__icon-inner-margin;
+      margin-right: $mca-button__icon-outer-margin;
+    }
+  }
   
   &--contained {
+    padding: 0 $mca-button--contained-vertical-padding;
     @include mca-theme-color-var(color, on-primary);
     @include mca-theme-color-var(background-color, primary);
     @include mca-button-state(on-primary);
-    padding: 0 $mca-button--contained-vertical-padding;
+  }
+
+  &--outlined, &--text {
+    background: none;
+    @include mca-button-state(primary);
+    @include mca-theme-color-var(color, primary);
   }
 
   &--outlined {
-    @include mca-theme-color-var(border-color, primary);
-    border-style: solid;
-    border-width: $mca-button-border-width;
+    border: $mca-button-border-width solid;
     padding: 0 $mca-button--outlined-vertical-padding;
+    @include mca-theme-color-var(border-color, primary);
   }
 
   &--text {
     padding: 0 $mca-button--text-vertical-padding;
   }
 
-  &--text, &--contained, &--outlined {
-    height: $mca-button-height;
-    min-width: $mca-button-min-width;
-    border-radius: $mca-button-border-radius;
-  }
-
-  &--text, &--outlined {
-    @include mca-button-state(primary);
-    @include mca-theme-color-var(color, primary);
-  }
-
   &--toggle {
-    @include mca-button-state(on-surface);
-    @include mca-theme-color-var(background-color, surface);
     width: $mca-button--toggle-size;
     height: $mca-button--toggle-size;
+    @include mca-button-state(on-surface);
+    @include mca-theme-color-var(background-color, surface);
   }
 
   &__label {
     vertical-align: middle;
-    font-family: Roboto, sans-serif;
     font-size: $mca-button__label-font-size;
   }
 }

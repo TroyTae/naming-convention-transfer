@@ -20,10 +20,10 @@
     transition: opacity 150ms $mca-motion-standard-timing-function;
     position: absolute;
     content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -$mca-button-border-width;
+    left: -$mca-button-border-width;
+    width: calc(100% + #{$mca-button-border-width * 2});
+    height: calc(100% + #{$mca-button-border-width * 2});
     opacity: map-get($theme-tone-opacity, enabled);
     @include mca-theme-color-var(background-color, $color);
   }

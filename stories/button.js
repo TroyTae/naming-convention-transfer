@@ -15,7 +15,7 @@ storiesOf('Button', module)
       </button>
       <button class="${spaces('mca-button', 'mca-button--contained')}">
         <span class="mca-button__label">BUTTON</span><!--
-     --><i class="material-icons mca-icon--dense">grade</i>
+     --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
       </button>   
     </section>
   `)
@@ -25,12 +25,12 @@ storiesOf('Button', module)
         <span class="mca-button__label">BUTTON</span>
       </button>
       <button class="${spaces('mca-button', 'mca-button--outlined')}">
-        <i class="material-icons mca-icon--dense">grade</i><!--
+        <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
      --><span class="mca-button__label">BUTTON</span>
       </button>
       <button class="${spaces('mca-button', 'mca-button--outlined')}">
         <span class="mca-button__label">BUTTON</span><!--
-     --><i class="material-icons mca-icon--dense">grade</i>
+     --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
       </button>
     </section>
   `)
@@ -40,25 +40,25 @@ storiesOf('Button', module)
         <span class="mca-button__label">BUTTON</span>
       </button>
       <button class="${spaces('mca-button', 'mca-button--text')}">
-        <i class="material-icons mca-icon--dense">grade</i><!--
+        <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
      --><span class="mca-button__label">BUTTON</span>
       </button>
       <button class="${spaces('mca-button', 'mca-button--text')}">
         <span class="mca-button__label">BUTTON</span><!--
-     --><i class="material-icons mca-icon--dense">grade</i>
+     --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
       </button>
     </section>
   `)
   .add('Toggle Button', () => `
     <section>
       <button class="${spaces('mca-button', 'mca-button--toggle')}">
-        <i class="material-icons mca-icon">format_align_justify</i>
+        <i class="${spaces('material-icons', 'mca-icon')}">format_align_justify</i>
       </button>
       <button class="${spaces('mca-button', 'mca-button--toggle')}">
-        <i class="material-icons mca-icon">format_align_left</i>
+        <i class="${spaces('material-icons', 'mca-icon')}">format_align_left</i>
       </button>
       <button class="${spaces('mca-button', 'mca-button--toggle')}">
-        <i class="material-icons mca-icon">format_align_right</i>
+        <i class="${spaces('material-icons', 'mca-icon')}">format_align_right</i>
       </button>
     </section>
   `);  
