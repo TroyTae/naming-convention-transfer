@@ -1,8 +1,6 @@
 @import "../motion/variable";
 @import "../theme/mixin";
 @import "../theme/function";
-@import "../theme/variable";
-@import "../theme/function";
 @import "../elevation/mixin";
 
 @mixin mca-button-elevation($z: 2, $z-hover: 4, $z-active: 8) {
@@ -17,8 +15,7 @@
 }
 
 @mixin mca-button-state($color) {
-  $tone: mca-theme-tone(mca-theme-color($color));
-  $opacity-map: if($tone == "light", $mca-theme-light-tone-opacity-map, $mca-theme-dark-tone-opacity-map);
+  $theme-tone-opacity: mac-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
   &::after {
     transition: opacity 150ms $mca-motion-standard-timing-function;
     position: absolute;
@@ -27,16 +24,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: map-get($opacity-map, enabled);
+    opacity: map-get($theme-tone-opacity, enabled);
     @include mca-theme-color-var(background-color, $color);
   }
   &:hover::after {
-    opacity: map-get($opacity-map, hover);
+    opacity: map-get($theme-tone-opacity, hover);
   }
   &:focus::after {
-    opacity: map-get($opacity-map, focus);
+    opacity: map-get($theme-tone-opacity, focus);
   }
   &:active::after {
-    opacity: map-get($opacity-map, pressed);
+    opacity: map-get($theme-tone-opacity, pressed);
   }
 }

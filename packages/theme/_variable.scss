@@ -11,7 +11,7 @@ $mca-theme-on-background: #000000 !default;
 $mca-theme-on-surface: #000000 !default;
 $mca-theme-on-error: #FFFFFF !default;
 
-$mca-theme-dark-tone-opacity-map: (
+$mca-theme-dark-tone-opacity: (
   enabled: 0,
   hover: 0.04,
   focus: 0.12,
@@ -21,7 +21,7 @@ $mca-theme-dark-tone-opacity-map: (
   dragged: 0.08
 ) !default;
 
-$mca-theme-light-tone-opacity-map: (
+$mca-theme-light-tone-opacity: (
   enabled: 0,
   hover: 0.08,
   focus: 0.24,
@@ -31,7 +31,7 @@ $mca-theme-light-tone-opacity-map: (
   dragged: 0.16
 ) !default;
 
-$mca-theme-linear-channel-values:
+$mca-theme-linear-channels:
   0
   .0003035269835488375
   .000607053967097675
