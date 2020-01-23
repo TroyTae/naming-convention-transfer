@@ -1,17 +1,15 @@
-$mca-button-height: 36px !default;
-$mca-button-min-width: 64px !default;
-$mca-button-vertical-padding: 8px !default;
-$mca-button-border-width: 1px !default;
-$mca-button-border-radius: 4px !default;
+$mca-button-height: 2.25rem !default;
+$mca-button-min-width: 4rem !default;
+$mca-button-border-width: 0.0625rem !default;
+$mca-button-border-radius: 0.25rem !default;
+
+$mca-button--contained-vertical-padding: 1rem !default;
+$mca-button--outlined-vertical-padding: 1rem !default;
+$mca-button--text-vertical-padding: 0.5rem !default;
+$mca-toggle-button-vertical-padding: 0.75rem !default;
 
 $mca-button--toggle-size: 48px !default;
 
-$mca-button--fab-size: 56px !default;
-$mca-button--fab--dense-size: 40px !default;
-$mca-button--fab--extend-size: 48px !default;
-$mca-button--fab--extend__label-vertical-margin: 12px !default;
-
 $mca-button__icon-spacing: 4px !default;
 
-$mca-button__label-vertical-margin: 8px !default;
 $mca-button__label-font-size: 0.875rem !default;
