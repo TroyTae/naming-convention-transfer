@@ -5,48 +5,52 @@ import '../packages/index.scss';
 
 storiesOf('Button', module)
   .add('Contained Button', () => `
-    <section>
-      <button class="${spaces('mca-button', 'mca-button--contained')}">
-        <span class="mca-button__label">BUTTON</span>
-      </button>
-      <button class="${spaces('mca-button', 'mca-button--contained')}">
-        <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
-     --><span class="mca-button__label">BUTTON</span>
-      </button>
-      <button class="${spaces('mca-button', 'mca-button--contained')}">
-        <span class="mca-button__label">BUTTON</span><!--
-     --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
-      </button>   
-    </section>
+    <h1>Basic</h1>
+    <button class="${spaces('mca-button', 'mca-button--contained')}">
+      <span class="mca-button__label">BUTTON</span>
+    </button>
+    <h1>Leading Icon</h1>
+    <button class="${spaces('mca-button', 'mca-button--contained')}">
+      <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
+   --><span class="mca-button__label">BUTTON</span>
+    </button>
+    <h1>Trailing Icon</h1>
+    <button class="${spaces('mca-button', 'mca-button--contained')}">
+      <span class="mca-button__label">BUTTON</span><!--
+   --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
+    </button>
   `)
   .add('Outlined Button', () => `
-    <section>
-      <button class="${spaces('mca-button', 'mca-button--outlined')}">
-        <span class="mca-button__label">BUTTON</span>
-      </button>
-      <button class="${spaces('mca-button', 'mca-button--outlined')}">
-        <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
-     --><span class="mca-button__label">BUTTON</span>
-      </button>
-      <button class="${spaces('mca-button', 'mca-button--outlined')}">
-        <span class="mca-button__label">BUTTON</span><!--
-     --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
-      </button>
-    </section>
+    <h1>Basic</h1>
+    <button class="${spaces('mca-button', 'mca-button--outlined')}">
+      <span class="mca-button__label">BUTTON</span>
+    </button>
+    <h1>Leading Icon</h1>
+    <button class="${spaces('mca-button', 'mca-button--outlined')}">
+      <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
+   --><span class="mca-button__label">BUTTON</span>
+    </button>
+    <h1>Trailing Icon</h1>
+    <button class="${spaces('mca-button', 'mca-button--outlined')}">
+      <span class="mca-button__label">BUTTON</span><!--
+   --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
+    </button>
   `)
   .add('Text Button', () => `
-    <section>
-      <button class="${spaces('mca-button', 'mca-button--text')}">
-        <span class="mca-button__label">BUTTON</span>
-      </button>
-      <button class="${spaces('mca-button', 'mca-button--text')}">
-        <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
-     --><span class="mca-button__label">BUTTON</span>
-      </button>
-      <button class="${spaces('mca-button', 'mca-button--text')}">
-        <span class="mca-button__label">BUTTON</span><!--
-     --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
-      </button>
+    <h1>Basic</h1>
+    <button class="${spaces('mca-button', 'mca-button--text')}">
+      <span class="mca-button__label">BUTTON</span>
+    </button>
+    <h1>Leading Icon</h1>
+    <button class="${spaces('mca-button', 'mca-button--text')}">
+      <i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i><!--
+   --><span class="mca-button__label">BUTTON</span>
+    </button>
+    <h1>Trailing Icon</h1>
+    <button class="${spaces('mca-button', 'mca-button--text')}">
+      <span class="mca-button__label">BUTTON</span><!--
+   --><i class="${spaces('material-icons', 'mca-icon', 'mca-icon--dense')}">grade</i>
+    </button>
     </section>
   `)
   .add('Toggle Button', () => `

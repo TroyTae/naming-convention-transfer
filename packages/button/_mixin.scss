@@ -2,18 +2,6 @@
 @import '../theme/mixin';
 @import '../theme/function';
 
-// @import "../elevation/mixin";
-// @mixin mca-button-elevation($z: 2, $z-hover: 4, $z-active: 8) {
-//   transition: box-shadow 280ms $mca-motion-standard-timing-function;
-//   @include mca-elevation($z);
-//   &:hover {
-//     @include mca-elevation($z-hover);
-//   }
-//   &:active {
-//     @include mca-elevation($z-active);
-//   }
-// }
-
 @mixin mca-button-state($color) {
   $theme-tone-opacity: mac-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
   &::after {
