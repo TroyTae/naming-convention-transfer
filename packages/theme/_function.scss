@@ -1,4 +1,4 @@
-@import "./variable";
+@import './variable';
 
 @function mca-luminance($color) {
   $red: nth($mca-theme-linear-channels, red($color) + 1);

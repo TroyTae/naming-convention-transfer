@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-import '../../packages/button/button.scss';
-import '../../packages/elevation/elevation.scss';
+import '../../packages/index.scss';
 
 storiesOf('Elevation', module)
   .add('Contained Button (2dp to 8dp)', () => `

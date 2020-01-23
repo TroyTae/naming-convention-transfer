@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-import '../../packages/button/button.scss';
+import '../../packages/index.scss';
 
 storiesOf('Icon', module)
   .add('Material Icon', () => `

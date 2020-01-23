@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-import './button.scss';
+import '../packages/index.scss';
 
 const renderHtml = (id) => (`
   <article id="${id}">
@@ -75,8 +75,4 @@ const renderHtml = (id) => (`
 `);
 
 storiesOf('Button', module)
-  .add('Default Theme', () => renderHtml('default-button'))
-  .add('Crane Theme', () => renderHtml('crane-button'))
-  .add('Fortnightly Theme', () => renderHtml('fortnightly-button'))
-  .add('Reply Theme', () => renderHtml('reply-button'))
-  .add('Shrine Theme', () => renderHtml('shrine-button'));
+  .add('Default Theme', () => renderHtml('default-button'));
