@@ -10,5 +10,9 @@ storiesOf('Text Field', module)
       <div class="${spaces('mca-text-field', 'mca-text-field--filled')}">
         <input type="text" class="mca-text-field__input" />
       </div>
+      <h1>Placeholder</h1>
+      <div class="${spaces('mca-text-field', 'mca-text-field--filled')}">
+        <input type="text" placeholder="Write text in here" class="mca-text-field__input" />
+      </div>
     </article>
   `);
