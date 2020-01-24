@@ -11,9 +11,10 @@
   
   &:enabled {
     &::after {
-      transition: opacity 150ms $mca-motion-standard-timing-function;
-      position: absolute;
       content: '';
+      will-change: opacity;
+      transition: opacity $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
+      position: absolute;
       top: -$mca-button-border-width;
       left: -$mca-button-border-width;
       width: calc(100% + #{$mca-button-border-width * 2});
