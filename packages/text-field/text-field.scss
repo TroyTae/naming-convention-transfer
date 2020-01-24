@@ -1,0 +1,31 @@
+@import './variable';
+@import './mixin';
+@import '../theme/mixin';
+@import '../motion/variable';
+
+.mca-text-field {
+  position: relative;
+
+  &--filled {
+    > .mca-text-field__input {
+      background-color: $mca-text-field--filled-background-color;
+      border-radius: $mca-text-field-border-radius $mca-text-field-border-radius 0 0;
+    }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: $mca-text-field__input-height;
+    font-size: $mca-text-field__input-font-size;
+    padding: 20px 12px 8px 12px;
+    border-bottom: 2px solid #8e8e8e;
+    transition: border-color $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
+    @include mca-theme-color-var(caret-color, primary);
+    &:focus {
+      @include mca-theme-color-var(border-color, primary);
+    }
+  }
+}

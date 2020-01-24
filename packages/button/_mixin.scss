@@ -5,21 +5,25 @@
 @mixin mca-button-state($color) {
   $theme-tone-opacity: mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
 
+  &::after {
+    position: absolute;
+    top: -$mca-button-border-width;
+    left: -$mca-button-border-width;
+    width: calc(100% + #{$mca-button-border-width * 2});
+    height: calc(100% + #{$mca-button-border-width * 2});
+    opacity: map-get($theme-tone-opacity, enabled);
+    @include mca-theme-color-var(background-color, $color);
+  }
+
   &:disabled {
     opacity: map-get($theme-tone-opacity, disabled);
   }
   
   &:enabled {
     &::after {
-      transition: opacity 150ms $mca-motion-standard-timing-function;
-      position: absolute;
       content: '';
-      top: -$mca-button-border-width;
-      left: -$mca-button-border-width;
-      width: calc(100% + #{$mca-button-border-width * 2});
-      height: calc(100% + #{$mca-button-border-width * 2});
-      opacity: map-get($theme-tone-opacity, enabled);
-      @include mca-theme-color-var(background-color, $color);
+      will-change: opacity;
+      transition: opacity $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
     }
     &:hover::after {
       opacity: map-get($theme-tone-opacity, hover);

@@ -66,15 +66,13 @@ storiesOf('Button', module)
     </section>
   `)
   .add('Toggle Button', () => `
-    <section>
-      <button class="${spaces('mca-button', 'mca-button--toggle')}">
-        <i class="${spaces('material-icons', 'mca-icon')}">format_align_justify</i>
-      </button>
-      <button disabled class="${spaces('mca-button', 'mca-button--toggle')}">
-        <i class="${spaces('material-icons', 'mca-icon')}">format_align_left</i>
-      </button>
-      <button class="${spaces('mca-button', 'mca-button--toggle')}">
-        <i class="${spaces('material-icons', 'mca-icon')}">format_align_right</i>
-      </button>
-    </section>
-  `);  
+    <button class="${spaces('mca-button', 'mca-button--toggle')}">
+      <i class="${spaces('material-icons', 'mca-icon')}">format_align_justify</i>
+    </button>
+    <button disabled class="${spaces('mca-button', 'mca-button--toggle')}">
+      <i class="${spaces('material-icons', 'mca-icon')}">format_align_left</i>
+    </button>
+    <button class="${spaces('mca-button', 'mca-button--toggle')}">
+      <i class="${spaces('material-icons', 'mca-icon')}">format_align_right</i>
+    </button>
+  `);
