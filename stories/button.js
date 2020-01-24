@@ -75,4 +75,4 @@ storiesOf('Button', module)
     <button class="${spaces('mca-button', 'mca-button--toggle')}">
       <i class="${spaces('material-icons', 'mca-icon')}">format_align_right</i>
     </button>
-  `);  
+  `);

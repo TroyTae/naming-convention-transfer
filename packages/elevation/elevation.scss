@@ -1,4 +1,4 @@
-@import "./mixin";
+@import './mixin';
 
 @for $z from 0 through 24 {
   .mca-elevation-z#{$z} {
