@@ -4,20 +4,18 @@
 @import '../motion/variable';
 
 @mixin mca-text-field-state($color) {
-  $theme-tone-opacity: mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
+  $disabled-opacity: map-get(mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color))), disabled);
 
-  transition: border-color $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
-  @include mca-theme-color-var(caret-color, primary);
+  &:enabled {
+    will-change: border-color;
+    transition: border-color $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
+  }
 
   &:disabled {
-    opacity: map-get($theme-tone-opacity, disabled);
+    opacity: $disabled-opacity;
   }
 
   &:focus {
-    @include mca-theme-color-var(border-color, primary);
-  }
-
-  &::placeholder {
-    @include mca-theme-color-var(color, $mca-text-field__input-placeholder-color);
+    @include mca-theme-color-var(border-color, $color);
   }
 }

@@ -5,18 +5,6 @@
   position: relative;
   overflow: hidden;
 
-  &--filled > .mca-text-field__input {
-    border-radius: $mca-text-field__input-border-radius $mca-text-field__input-border-radius 0 0;
-    background-color: $mca-text-field--filled__input-background-color;
-    border-bottom-width: $mca-text-field__input-border-width;
-  }
-
-  &--outlined > .mca-text-field__input {
-    border-radius: $mca-text-field__input-border-radius;
-    background-color: none;
-    border-width: $mca-text-field__input-border-width;
-  }
-
   &__input {
     box-sizing: border-box;
     border: none;
@@ -26,6 +14,23 @@
     font-size: $mca-text-field__input-font-size;
     padding: 0 $mca-text-field__input-vertical-padding;
     border: 0 solid $mca-text-field__input-border-color;
-    @include mca-text-field-state($mca-text-field--filled__input-background-color);
+    @include mca-text-field-state(primary);
+    @include mca-theme-color-var(caret-color, primary);
+
+    &::placeholder {
+      @include mca-theme-color-var(color, $mca-text-field__input-placeholder-color);
+    }
+
+    &--filled {
+      background-color: $mca-text-field--filled__input-background-color;
+      border-radius: $mca-text-field__input-border-radius $mca-text-field__input-border-radius 0 0;
+      border-bottom-width: $mca-text-field__input-border-width;
+    }
+  
+    &--outlined {
+      background: none;
+      border-radius: $mca-text-field__input-border-radius;
+      border-width: $mca-text-field__input-border-width;
+    }
   }
 }
