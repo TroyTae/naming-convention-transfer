@@ -1,2 +1,23 @@
+@import './variable';
 @import '../theme/mixin';
 @import '../theme/function';
+@import '../motion/variable';
+
+@mixin mca-text-field-state($color) {
+  $theme-tone-opacity: mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
+
+  transition: border-color $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
+  @include mca-theme-color-var(caret-color, primary);
+
+  &:disabled {
+    opacity: map-get($theme-tone-opacity, disabled);
+  }
+
+  &:focus {
+    @include mca-theme-color-var(border-color, primary);
+  }
+
+  &::placeholder {
+    @include mca-theme-color-var(color, $mca-text-field__input-placeholder-color);
+  }
+}

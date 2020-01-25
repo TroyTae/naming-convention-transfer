@@ -14,5 +14,9 @@ storiesOf('Text Field', module)
       <div class="${spaces('mca-text-field', 'mca-text-field--filled')}">
         <input type="text" placeholder="Write text in here" class="mca-text-field__input" />
       </div>
+      <h1>Disabled</h1>
+      <div class="${spaces('mca-text-field', 'mca-text-field--filled')}">
+        <input disabled type="text" placeholder="You cannot write in here" class="mca-text-field__input" />
+      </div>
     </article>
   `);
