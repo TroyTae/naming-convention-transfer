@@ -21,12 +21,11 @@
     height: $mca-text-field__input-height;
     font-size: $mca-text-field__input-font-size;
     padding: 0 $mca-text-field__input-vertical-padding;
-    border-bottom: 2px solid #8e8e8e;
+    color: $mca-text-field-color;
+    border-bottom: $mca-text-field-border-width solid $mca-text-field-border-color;
     transition: border-color $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
     @include mca-theme-color-var(caret-color, primary);
     &:focus { @include mca-theme-color-var(border-color, primary); }
-    &::placeholder {
-      @include mca-theme-color-var(color, #626262);
-    }
+    &::placeholder { @include mca-theme-color-var(color, #666); }
   }
 }
