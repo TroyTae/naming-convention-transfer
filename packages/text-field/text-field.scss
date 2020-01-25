@@ -1,17 +1,9 @@
 @import './variable';
 @import './mixin';
-@import '../theme/mixin';
-@import '../motion/variable';
 
 .mca-text-field {
   position: relative;
-
-  &--filled {
-    > .mca-text-field__input {
-      background-color: $mca-text-field--filled-background-color;
-      border-radius: $mca-text-field-border-radius $mca-text-field-border-radius 0 0;
-    }
-  }
+  overflow: hidden;
 
   &__input {
     box-sizing: border-box;
@@ -20,12 +12,25 @@
     width: 100%;
     height: $mca-text-field__input-height;
     font-size: $mca-text-field__input-font-size;
-    padding: 20px 12px 8px 12px;
-    border-bottom: 2px solid #8e8e8e;
-    transition: border-color $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
+    padding: 0 $mca-text-field__input-vertical-padding;
+    border: 0 solid $mca-text-field__input-border-color;
+    @include mca-text-field-state(primary);
     @include mca-theme-color-var(caret-color, primary);
-    &:focus {
-      @include mca-theme-color-var(border-color, primary);
+
+    &::placeholder {
+      @include mca-theme-color-var(color, $mca-text-field__input-placeholder-color);
+    }
+
+    &--filled {
+      background-color: $mca-text-field--filled__input-background-color;
+      border-radius: $mca-text-field__input-border-radius $mca-text-field__input-border-radius 0 0;
+      border-bottom-width: $mca-text-field__input-border-width;
+    }
+  
+    &--outlined {
+      background: none;
+      border-radius: $mca-text-field__input-border-radius;
+      border-width: $mca-text-field__input-border-width;
     }
   }
 }

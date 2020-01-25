@@ -7,10 +7,10 @@
 
   &::after {
     position: absolute;
-    top: -$mca-button-border-width;
+    top: 0;
     left: -$mca-button-border-width;
     width: calc(100% + #{$mca-button-border-width * 2});
-    height: calc(100% + #{$mca-button-border-width * 2});
+    height: 100%;
     opacity: map-get($theme-tone-opacity, enabled);
     @include mca-theme-color-var(background-color, $color);
   }
