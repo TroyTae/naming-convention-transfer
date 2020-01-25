@@ -19,4 +19,20 @@ storiesOf('Text Field', module)
         <input disabled type="text" placeholder="You cannot write in here" class="mca-text-field__input" />
       </div>
     </article>
+  `)
+  .add('Outlined Text Field', () => `
+    <article style="max-width: 280px;">
+      <h1>Basic</h1>
+      <div class="${spaces('mca-text-field', 'mca-text-field--outlined')}">
+        <input type="text" class="mca-text-field__input" />
+      </div>
+      <h1>Placeholder</h1>
+      <div class="${spaces('mca-text-field', 'mca-text-field--outlined')}">
+        <input type="text" placeholder="Write text in here" class="mca-text-field__input" />
+      </div>
+      <h1>Disabled</h1>
+      <div class="${spaces('mca-text-field', 'mca-text-field--outlined')}">
+        <input disabled type="text" placeholder="You cannot write in here" class="mca-text-field__input" />
+      </div>
+    </article>
   `);

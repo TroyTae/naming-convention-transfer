@@ -5,12 +5,16 @@
   position: relative;
   overflow: hidden;
 
-  &--filled {
-    > .mca-text-field__input {
-      border-radius: $mca-text-field__input-border-radius $mca-text-field__input-border-radius 0 0;
-      background-color: $mca-text-field--filled__input-background-color;
-      border-bottom-width: $mca-text-field__input-border-width;
-    }
+  &--filled > .mca-text-field__input {
+    border-radius: $mca-text-field__input-border-radius $mca-text-field__input-border-radius 0 0;
+    background-color: $mca-text-field--filled__input-background-color;
+    border-bottom-width: $mca-text-field__input-border-width;
+  }
+
+  &--outlined > .mca-text-field__input {
+    border-radius: $mca-text-field__input-border-radius;
+    background-color: none;
+    border-width: $mca-text-field__input-border-width;
   }
 
   &__input {
