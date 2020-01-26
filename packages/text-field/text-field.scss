@@ -1,5 +1,6 @@
 @import './variable';
 @import './mixin';
+@import '../theme/variable';
 
 .mca-text-field {
   position: relative;
@@ -13,24 +14,25 @@
     height: $mca-text-field__input-height;
     font-size: $mca-text-field__input-font-size;
     padding: 0 $mca-text-field__input-vertical-padding;
-    border: 0 solid $mca-text-field__input-border-color;
+    border: 0 solid rgba($mca-theme-on-surface, .42);
+    color: rgba($mca-theme-on-surface, .87);
     @include mca-text-field-state(primary);
     @include mca-theme-color-var(caret-color, primary);
 
     &::placeholder {
-      @include mca-theme-color-var(color, $mca-text-field__input-placeholder-color);
+      color: rgba($mca-theme-on-surface, .6);
     }
 
     &--filled {
-      background-color: $mca-text-field--filled__input-background-color;
-      border-radius: $mca-text-field__input-border-radius $mca-text-field__input-border-radius 0 0;
+      background-color: rgba($mca-theme-on-surface, .04);
       border-bottom-width: $mca-text-field__input-border-width;
+      border-radius: $mca-text-field__input-border-radius $mca-text-field__input-border-radius 0 0;
     }
   
     &--outlined {
       background: none;
-      border-radius: $mca-text-field__input-border-radius;
       border-width: $mca-text-field__input-border-width;
+      border-radius: $mca-text-field__input-border-radius;
     }
   }
 }
