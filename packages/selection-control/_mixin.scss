@@ -1,0 +1,21 @@
+@import './variable';
+@import '../theme/mixin';
+@import '../theme/function';
+@import '../motion/variable';
+
+@mixin mca-text-field-state($color) {
+  $disabled-opacity: map-get(mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color))), disabled);
+
+  &:enabled {
+    will-change: border-color;
+    transition: border-color $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
+  }
+
+  &:disabled {
+    opacity: $disabled-opacity;
+  }
+
+  &:focus {
+    @include mca-theme-color-var(border-color, $color);
+  }
+}

@@ -4,10 +4,8 @@
 
 .mca-text-field {
   position: relative;
-  overflow: hidden;
 
   &__input {
-    box-sizing: border-box;
     border: none;
     outline: none;
     width: 100%;
