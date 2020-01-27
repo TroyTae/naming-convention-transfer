@@ -3,19 +3,36 @@
 @import '../theme/function';
 @import '../motion/variable';
 
-@mixin mca-text-field-state($color) {
+@mixin mca-selection-control-state($color) {
   $disabled-opacity: map-get(mca-theme-color-opacity($color), disabled);
 
   &:enabled {
-    will-change: border-color;
-    transition: border-color $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
+    + .mca-selection-control__checkbox,
+    + .mca-selection-control__radio {
+      cursor: pointer;
+      will-change: border-color,background-color;
+      transition: all $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
+    }
   }
 
   &:disabled {
-    opacity: $disabled-opacity;
+    + .mca-selection-control__checkbox,
+    + .mca-selection-control__radio {
+      opacity: $disabled-opacity;
+    }
   }
 
-  &:focus {
-    @include mca-theme-color-var(border-color, $color);
+  &:enabled:hover, &:enabled:focus, &:checked {
+    + .mca-selection-control__checkbox,
+    + .mca-selection-control__radio {
+      @include mca-theme-color-var(border-color, $color);
+    }
+  }
+
+  &:checked {
+    + .mca-selection-control__checkbox,
+    + .mca-selection-control__radio {
+      @include mca-theme-color-var(background-color, $color);
+    }
   }
 }
