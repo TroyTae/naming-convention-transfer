@@ -10,6 +10,9 @@
     + .mca-selection-control__checkbox,
     + .mca-selection-control__radio {
       cursor: pointer;
+    }
+    + .mca-selection-control__checkbox,
+    + .mca-selection-control__radio::before {
       will-change: border-color,background-color;
       transition: all $mca-motion-simple-animation-duration $mca-motion-standard-timing-function;
     }
@@ -31,7 +34,7 @@
 
   &:checked {
     + .mca-selection-control__checkbox,
-    + .mca-selection-control__radio {
+    + .mca-selection-control__radio::before {
       @include mca-theme-color-var(background-color, $color);
     }
   }
