@@ -1,0 +1,19 @@
+@import './variable';
+@import '../theme/mixin';
+@import '../theme/variable';
+
+.mca-data-table {
+  border-spacing: 0;
+  border-radius: 4px;
+  border: 1px solid black;
+  @include mca-theme-color-var(background-color, surface);
+
+  &__head__row__column {
+    padding: 8px;
+  }
+  
+  &__body__row__column {
+    padding: 6px 8px;
+    border-top: 1px solid black;
+  }
+}
