@@ -3,7 +3,6 @@
 @import '../theme/variable';
 
 .mca-selection-control {
-  cursor: pointer;
   position: relative;
   display: inline-block;
 
@@ -15,6 +14,8 @@
     height: 100%;
     opacity: 0;
     margin: 0;
+    
+    cursor: pointer;
     &:checked {
       + .mca-selection-control__checkbox {
         border-color: black;
