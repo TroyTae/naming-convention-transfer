@@ -3,7 +3,7 @@
 @import '../theme/function';
 
 @mixin mca-button-state($color) {
-  $theme-tone-opacity: mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
+  $theme-tone-opacity: mca-theme-color-opacity($color);
 
   &::after {
     position: absolute;

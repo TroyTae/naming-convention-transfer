@@ -8,21 +8,27 @@ storiesOf('Selection Control', module)
     <label>
       <div class="mca-selection-control middle">
         <input type="checkbox" class="mca-selection-control__input" />
-        <div class="mca-selection-control__checkbox"></div>
+        <div class="mca-selection-control__checkbox">
+          <i class="material-icons mca-icon mca-icon--dense">check</i>
+        </div>
       </div>
       <span class="middle">Checkbox1</span>
     </label>
     <label>
       <div class="mca-selection-control middle">
         <input type="checkbox" class="mca-selection-control__input" />
-        <div class="mca-selection-control__checkbox"></div>
+        <div class="mca-selection-control__checkbox">
+          <i class="material-icons mca-icon mca-icon--dense">check</i>
+        </div>
       </div>
       <span class="middle">Checkbox2</span>
     </label>
     <label>
       <div class="mca-selection-control middle">
         <input type="checkbox" class="mca-selection-control__input" />
-        <div class="mca-selection-control__checkbox"></div>
+        <div class="mca-selection-control__checkbox">
+          <i class="material-icons mca-icon mca-icon--dense">check</i>
+        </div>
       </div>
       <span class="middle">Checkbox3</span>
     </label>

@@ -30,6 +30,7 @@
 
   &__checkbox,
   &__radio {
+    position: relative;
     width: 20px;
     height: 20px;
     border: 2px solid rgba($mca-theme-on-surface, .54);
@@ -37,6 +38,12 @@
 
   &__checkbox {
     border-radius: 2px;
+    > .mca-icon {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      color: white;
+    }
   }
 
   &__radio {
