@@ -5,15 +5,23 @@
 .mca-data-table {
   border-spacing: 0;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid rgba($mca-theme-on-surface, .12);
   @include mca-theme-color-var(background-color, surface);
+
+  &__head, &__body {
+    &__row__column {
+      color: rgba($mca-theme-on-surface, .87);
+      font-size: .875rem;
+    }
+  }
 
   &__head__row__column {
     padding: 8px;
+    font-weight: 500;
   }
   
   &__body__row__column {
     padding: 6px 8px;
-    border-top: 1px solid black;
+    border-top: 1px solid rgba($mca-theme-on-surface, .12);
   }
 }
