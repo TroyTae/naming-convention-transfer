@@ -3,13 +3,13 @@
 @import '../theme/function';
 
 @mixin mca-button-state($color) {
-  $theme-tone-opacity: mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color)));
+  $theme-tone-opacity: mca-theme-color-opacity($color);
 
   &::after {
     position: absolute;
     top: 0;
-    left: -$mca-button-border-width;
-    width: calc(100% + #{$mca-button-border-width * 2});
+    left: 0;
+    width: 100%;
     height: 100%;
     opacity: map-get($theme-tone-opacity, enabled);
     @include mca-theme-color-var(background-color, $color);

@@ -1,7 +1,7 @@
 import spaces from 'one-spaces';
 import { storiesOf } from '@storybook/html';
 
-import '../packages/index.scss';
+import './index.scss';
 
 storiesOf('Button', module)
   .add('Contained Button', () => `

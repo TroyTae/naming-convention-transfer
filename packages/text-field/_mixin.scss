@@ -4,7 +4,7 @@
 @import '../motion/variable';
 
 @mixin mca-text-field-state($color) {
-  $disabled-opacity: map-get(mca-theme-tone-opacity(mca-theme-tone(mca-theme-color($color))), disabled);
+  $disabled-opacity: map-get(mca-theme-color-opacity($color), disabled);
 
   &:enabled {
     will-change: border-color;
