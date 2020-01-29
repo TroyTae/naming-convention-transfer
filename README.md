@@ -1,4 +1,4 @@
-[![build](https://img.shields.io/github/workflow/status/TroyTae/naming-convention-transfer/build/master?style=flat-square)](https://github.com/TroyTae/naming-convention-transfer/actions?query=workflow%3Abuild)
+[![build](https://img.shields.io/github/workflow/status/TroyTae/naming-convention-transfer/naming-convention-transfer?style=flat-square)](https://github.com/TroyTae/naming-convention-transfer/actions?query=workflow%3Anaming-convention-transfer)
 [![size](https://img.shields.io/github/size/TroyTae/naming-convention-transfer/dist/naming-convention-transfer.js?style=flat-square)](https://github.com/TroyTae/naming-convention-transfer/blob/master/dist/naming-convention-transfer.js)
 [![npm](https://img.shields.io/npm/v/naming-convention-transfer?color=%23fb3e44&style=flat-square)](https://www.npmjs.com/package/naming-convention-transfer)
 [![license](https://img.shields.io/github/license/TroyTae/naming-convention-transfer?style=flat-square)](https://github.com/TroyTae/naming-convention-transfer/blob/master/LICENSE)
