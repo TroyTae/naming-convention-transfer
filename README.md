@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/naming-convention-transfer?color=%23fb3e44&style=flat-square)](https://www.npmjs.com/package/naming-convention-transfer)
 [![license](https://img.shields.io/github/license/TroyTae/naming-convention-transfer?style=flat-square)](https://github.com/TroyTae/naming-convention-transfer/blob/master/LICENSE)
 
-# One Spaces
+# Naming Convention Transfer
 Change your naming convention freely!
 
 ## Installation

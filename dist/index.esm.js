@@ -1,6 +1,6 @@
 /**
  * @author TroyTae
- * @version 1.0.0
+ * @version 1.0.1
  * @name naming-convention-transfer
  */
 var KEBAB_CASE_KEYWORD = '-';
@@ -9,26 +9,6 @@ var CAPITAL_LETTER_REGEXP = /[A-Z]/g;
 var keywordToUpperCase = function (v) {
     return v[1].toUpperCase();
 };
-// kabab case
-function kebabToSnake(kebabCaseString) {
-    return kebabCaseString.replace(/-/g, SNAKE_CASE_KEYWORD);
-}
-function kebabToCamel(kebabCaseString) {
-    return kebabCaseString.replace(/-\w/g, keywordToUpperCase);
-}
-function kebabToPascal(kebabCaseString) {
-    return camelToPascal(kebabToCamel(kebabCaseString));
-}
-// snake case
-function snakeToKebab(snakeCaseString) {
-    return snakeCaseString.replace(/_/g, KEBAB_CASE_KEYWORD);
-}
-function snakeToCamel(snakeCaseString) {
-    return snakeCaseString.replace(/_\w/g, keywordToUpperCase);
-}
-function snakeToPascal(snakeCaseString) {
-    return camelToPascal(snakeToCamel(snakeCaseString));
-}
 // camel case
 function camelToPascal(camelCaseString) {
     return camelCaseString[0].toUpperCase() + camelCaseString.slice(1);
@@ -52,6 +32,26 @@ function pascalToKebab(pascalCaseString) {
 }
 function pascalToSnake(pascalCaseString) {
     return camelToSnake(pascalToCamel(pascalCaseString));
+}
+// kabab case
+function kebabToSnake(kebabCaseString) {
+    return kebabCaseString.replace(/-/g, SNAKE_CASE_KEYWORD);
+}
+function kebabToCamel(kebabCaseString) {
+    return kebabCaseString.replace(/-\w/g, keywordToUpperCase);
+}
+function kebabToPascal(kebabCaseString) {
+    return camelToPascal(kebabToCamel(kebabCaseString));
+}
+// snake case
+function snakeToKebab(snakeCaseString) {
+    return snakeCaseString.replace(/_/g, KEBAB_CASE_KEYWORD);
+}
+function snakeToCamel(snakeCaseString) {
+    return snakeCaseString.replace(/_\w/g, keywordToUpperCase);
+}
+function snakeToPascal(snakeCaseString) {
+    return camelToPascal(snakeToCamel(snakeCaseString));
 }
 
 export { camelToKebab, camelToPascal, camelToSnake, kebabToCamel, kebabToPascal, kebabToSnake, pascalToCamel, pascalToKebab, pascalToSnake, snakeToCamel, snakeToKebab, snakeToPascal };

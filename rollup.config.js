@@ -3,6 +3,7 @@ const fs = require('fs');
 const rimraf = require('rimraf');
 const {terser} = require('rollup-plugin-terser');
 const typescript = require('rollup-plugin-typescript2');
+const {kebabToPascal} = require('naming-convention-transfer');
 
 const DIST_DIRECTORY_PATH = './dist';
 rimraf.sync(DIST_DIRECTORY_PATH);
@@ -25,7 +26,7 @@ const createConfig = (format) => {
       strict : !isBrowser,
       format: format,
       file: file,
-      name: pkg.name.split('-').map((v) => v.slice(0, 1).toUpperCase() + v.slice(1)).join(''),
+      name: kebabToPascal(pkg.name)
     },
     plugins: [
       typescript({ clean: true }),
