@@ -1,2 +1,13 @@
-declare function func(): string;
-export { func };
+declare function kebabToSnake(kebabCaseString: string): string;
+declare function kebabToCamel(kebabCaseString: string): string;
+declare function kebabToPascal(kebabCaseString: string): string;
+declare function snakeToKebab(snakeCaseString: string): string;
+declare function snakeToCamel(snakeCaseString: string): string;
+declare function snakeToPascal(snakeCaseString: string): string;
+declare function camelToPascal(camelCaseString: string): string;
+declare function camelToKebab(camelCaseString: string): string;
+declare function camelToSnake(camelCaseString: string): string;
+declare function pascalToCamel(pascalCaseString: string): string;
+declare function pascalToKebab(pascalCaseString: string): string;
+declare function pascalToSnake(pascalCaseString: string): string;
+export { kebabToSnake, kebabToCamel, kebabToPascal, snakeToKebab, snakeToCamel, snakeToPascal, camelToPascal, camelToKebab, camelToSnake, pascalToCamel, pascalToKebab, pascalToSnake };

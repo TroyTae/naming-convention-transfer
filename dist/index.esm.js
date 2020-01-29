@@ -3,8 +3,55 @@
  * @version 1.0.0
  * @name naming-convention-transfer
  */
-function func() {
-    return 'test';
+var KEBAB_CASE_KEYWORD = '-';
+var SNAKE_CASE_KEYWORD = '_';
+var CAPITAL_LETTER_REGEXP = /[A-Z]/g;
+var keywordToUpperCase = function (v) {
+    return v[1].toUpperCase();
+};
+// kabab case
+function kebabToSnake(kebabCaseString) {
+    return kebabCaseString.replace(/-/g, SNAKE_CASE_KEYWORD);
+}
+function kebabToCamel(kebabCaseString) {
+    return kebabCaseString.replace(/-\w/g, keywordToUpperCase);
+}
+function kebabToPascal(kebabCaseString) {
+    return camelToPascal(kebabToCamel(kebabCaseString));
+}
+// snake case
+function snakeToKebab(snakeCaseString) {
+    return snakeCaseString.replace(/_/g, KEBAB_CASE_KEYWORD);
+}
+function snakeToCamel(snakeCaseString) {
+    return snakeCaseString.replace(/_\w/g, keywordToUpperCase);
+}
+function snakeToPascal(snakeCaseString) {
+    return camelToPascal(snakeToCamel(snakeCaseString));
+}
+// camel case
+function camelToPascal(camelCaseString) {
+    return camelCaseString[0].toUpperCase() + camelCaseString.slice(1);
+}
+function camelToKebab(camelCaseString) {
+    return camelCaseString.replace(CAPITAL_LETTER_REGEXP, function (v) {
+        return KEBAB_CASE_KEYWORD + v.toLowerCase();
+    });
+}
+function camelToSnake(camelCaseString) {
+    return camelCaseString.replace(CAPITAL_LETTER_REGEXP, function (v) {
+        return SNAKE_CASE_KEYWORD + v.toLowerCase();
+    });
+}
+// pascal case
+function pascalToCamel(pascalCaseString) {
+    return pascalCaseString[0].toLowerCase() + pascalCaseString.slice(1);
+}
+function pascalToKebab(pascalCaseString) {
+    return camelToKebab(pascalToCamel(pascalCaseString));
+}
+function pascalToSnake(pascalCaseString) {
+    return camelToSnake(pascalToCamel(pascalCaseString));
 }
 
-export { func };
+export { camelToKebab, camelToPascal, camelToSnake, kebabToCamel, kebabToPascal, kebabToSnake, pascalToCamel, pascalToKebab, pascalToSnake, snakeToCamel, snakeToKebab, snakeToPascal };
