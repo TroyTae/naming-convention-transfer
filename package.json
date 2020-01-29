@@ -1,20 +1,42 @@
 {
-  "name": "material-components-air",
-  "author": "Troy Tae",
-  "version": "0.0.0",
-  "main": "index.scss",
-  "scripts": {
-    "start": "start-storybook -p 7001",
-    "build": "build-storybook -o docs"
+  "name": "naming-convention-transfer",
+  "version": "1.0.0",
+  "description": "Change your naming↔️convention freely!",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/TroyTae/naming-convention-transfer/blob/master/README.md",
+  "author": {
+    "name": "TroyTae",
+    "email": "tjy970721@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TroyTae/naming-convention-transfer.git"
+  },
+  "bugs": {
+    "email": "tjy970721@gmail.com",
+    "url": "https://github.com/TroyTae/naming-convention-transfer/issues"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@storybook/html": "^5.3.8",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.4.2",
-    "node-sass": "^4.13.1",
-    "one-spaces": "^1.3.2",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.3"
-  }
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "rimraf": "^3.0.1",
+    "rollup": "^1.30.1",
+    "rollup-plugin-terser": "^5.2.0"
+  },
+  "scripts": {
+    "build": "rollup --c rollup.config.js",
+    "test": "npm run test:unit & npm run test:lint",
+    "test:unit": "jest",
+    "test:lint": "eslint --ext .js src/",
+    "fix:lint": "eslint --fix --ext .js src/"
+  },
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__",
+    "doc": "README.md"
+  },
+  "license": "MIT",
+  "keywords": []
 }

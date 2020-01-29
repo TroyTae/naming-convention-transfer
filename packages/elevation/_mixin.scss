@@ -1,8 +1,0 @@
-@import './variable';
-
-@mixin mca-elevation($z: 0, $color: #000) {
-  box-shadow:
-    #{"#{map-get($mca-elevation-umbra-shadow, $z)} #{rgba($color, $mca-elevation-umbra-opacity)}"},
-    #{"#{map-get($mca-elevation-penumbra-shadow, $z)} #{rgba($color, $mca-elevation-penumbra-opacity)}"},
-    #{"#{map-get($mca-elevation-antumbra-shadow, $z)} #{rgba($color, $mca-elevation-antumbra-opacity)}"};
-}

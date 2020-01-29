@@ -1,0 +1,13 @@
+
+.idea
+.github
+.vscode
+.DS_Store
+
+src
+__tests__
+coverage
+node_modules
+
+jest.config.js
+rollup.config.js
