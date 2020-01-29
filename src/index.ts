@@ -1,5 +1,5 @@
 function func() {
-  console.log('test');
+  return 'test';
 }
 
 export { func };

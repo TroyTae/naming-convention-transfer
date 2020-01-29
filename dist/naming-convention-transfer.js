@@ -1,1 +1,1 @@
-var NamingConventionTransfer=function(n){return n.func=function(){console.log("test")},n}({});
+var NamingConventionTransfer=function(n){return n.func=function(){return"test"},n}({});

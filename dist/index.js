@@ -8,7 +8,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 function func() {
-    console.log('test');
+    return 'test';
 }
 
 exports.func = func;

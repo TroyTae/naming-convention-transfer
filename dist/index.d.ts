@@ -1,2 +1,2 @@
-declare function func(): void;
+declare function func(): string;
 export { func };
