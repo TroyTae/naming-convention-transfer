@@ -1,7 +1,7 @@
 {
   "name": "naming-convention-transfer",
   "version": "1.0.0",
-  "description": "Change your naming↔️convention freely!",
+  "description": "Change your naming convention freely!",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -42,5 +42,9 @@
     "doc": "README.md"
   },
   "license": "MIT",
-  "keywords": []
+  "keywords": [
+    "naming",
+    "convention",
+    "transfer"
+  ]
 }
