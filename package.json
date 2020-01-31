@@ -24,8 +24,7 @@
   "devDependencies": {
     "eslint-config-troy-recommended": "git://github.com/TroyTae/eslint-config-troy-recommended.git",
     "rollup-config-troy-recommended": "git://github.com/TroyTae/rollup-config-troy-recommended.git",
-    "jest": "^25.1.0",
-    "naming-convention-transfer": "^1.0.1"
+    "jest": "^25.1.0"
   },
   "scripts": {
     "build": "rollup --c rollup.config.js",
