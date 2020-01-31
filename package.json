@@ -18,10 +18,11 @@
     "email": "tjy970721@gmail.com",
     "url": "https://github.com/TroyTae/naming-convention-transfer/issues"
   },
+  "eslintConfig": {
+    "extends": "troy-recommended"
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.18.0",
-    "@typescript-eslint/parser": "^2.18.0",
-    "eslint": "^6.8.0",
+    "eslint-config-troy-recommended": "git://github.com/TroyTae/eslint-config-troy-recommended.git#v1.0.1",
     "jest": "^25.1.0",
     "rimraf": "^3.0.1",
     "rollup": "^1.30.1",
