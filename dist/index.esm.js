@@ -1,6 +1,6 @@
 /**
  * @author TroyTae
- * @version 1.0.1
+ * @version 1.0.2
  * @name naming-convention-transfer
  */
 var KEBAB_CASE_KEYWORD = '-';

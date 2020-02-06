@@ -1,6 +1,6 @@
 {
   "name": "naming-convention-transfer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Change your naming convention freely!",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

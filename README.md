@@ -4,7 +4,8 @@
 [![license](https://img.shields.io/github/license/TroyTae/naming-convention-transfer?style=flat-square)](https://github.com/TroyTae/naming-convention-transfer/blob/master/LICENSE)
 
 # Naming Convention Transfer
-Change your naming convention freely!
+ke-bab! s_nake! caMel! PasCal!  
+Transfer your naming convention for each case!
 
 ## Installation
 
