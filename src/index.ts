@@ -66,5 +66,5 @@ export {
   camelToSnake,
   pascalToCamel,
   pascalToKebab,
-  pascalToSnake
+  pascalToSnake,
 };

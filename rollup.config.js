@@ -1,6 +1,6 @@
 const pkg = require('./package.json');
-const {createUniversalConfigs} = require('troyjs/rollup');
 const {clearDirectory} = require('troyjs/node');
+const {createUniversalConfigs} = require('troyjs/rollup');
 
 clearDirectory('./dist');
 
