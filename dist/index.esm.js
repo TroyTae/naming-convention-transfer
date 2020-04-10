@@ -9,7 +9,6 @@ var CAPITAL_LETTER_REGEXP = /[A-Z]/g;
 var keywordToUpperCase = function (v) {
     return v[1].toUpperCase();
 };
-// camel case
 function camelToPascal(camelCaseString) {
     return camelCaseString[0].toUpperCase() + camelCaseString.slice(1);
 }
@@ -23,7 +22,6 @@ function camelToSnake(camelCaseString) {
         return SNAKE_CASE_KEYWORD + v.toLowerCase();
     });
 }
-// pascal case
 function pascalToCamel(pascalCaseString) {
     return pascalCaseString[0].toLowerCase() + pascalCaseString.slice(1);
 }
@@ -33,7 +31,6 @@ function pascalToKebab(pascalCaseString) {
 function pascalToSnake(pascalCaseString) {
     return camelToSnake(pascalToCamel(pascalCaseString));
 }
-// kabab case
 function kebabToSnake(kebabCaseString) {
     return kebabCaseString.replace(/-/g, SNAKE_CASE_KEYWORD);
 }
@@ -43,7 +40,6 @@ function kebabToCamel(kebabCaseString) {
 function kebabToPascal(kebabCaseString) {
     return camelToPascal(kebabToCamel(kebabCaseString));
 }
-// snake case
 function snakeToKebab(snakeCaseString) {
     return snakeCaseString.replace(/_/g, KEBAB_CASE_KEYWORD);
 }

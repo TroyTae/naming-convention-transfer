@@ -10,4 +10,4 @@ declare function kebabToPascal(kebabCaseString: string): string;
 declare function snakeToKebab(snakeCaseString: string): string;
 declare function snakeToCamel(snakeCaseString: string): string;
 declare function snakeToPascal(snakeCaseString: string): string;
-export { kebabToSnake, kebabToCamel, kebabToPascal, snakeToKebab, snakeToCamel, snakeToPascal, camelToPascal, camelToKebab, camelToSnake, pascalToCamel, pascalToKebab, pascalToSnake };
+export { kebabToSnake, kebabToCamel, kebabToPascal, snakeToKebab, snakeToCamel, snakeToPascal, camelToPascal, camelToKebab, camelToSnake, pascalToCamel, pascalToKebab, pascalToSnake, };
