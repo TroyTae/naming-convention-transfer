@@ -6,7 +6,6 @@ const keywordToUpperCase = function(v: string): string {
   return v[1].toUpperCase();
 };
 
-// camel case
 function camelToPascal(camelCaseString: string): string {
   return camelCaseString[0].toUpperCase() + camelCaseString.slice(1);
 }
@@ -21,7 +20,6 @@ function camelToSnake(camelCaseString: string): string {
   });
 }
 
-// pascal case
 function pascalToCamel(pascalCaseString: string): string {
   return pascalCaseString[0].toLowerCase() + pascalCaseString.slice(1);
 }
@@ -32,7 +30,6 @@ function pascalToSnake(pascalCaseString: string): string {
   return camelToSnake(pascalToCamel(pascalCaseString));
 }
 
-// kabab case
 function kebabToSnake(kebabCaseString: string): string {
   return kebabCaseString.replace(/-/g, SNAKE_CASE_KEYWORD);
 }
@@ -43,7 +40,6 @@ function kebabToPascal(kebabCaseString: string): string {
   return camelToPascal(kebabToCamel(kebabCaseString));
 }
 
-// snake case
 function snakeToKebab(snakeCaseString: string): string {
   return snakeCaseString.replace(/_/g, KEBAB_CASE_KEYWORD);
 }
