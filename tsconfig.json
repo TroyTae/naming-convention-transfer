@@ -1,6 +1,11 @@
 {
-  "extends": "troyjs/tsconfig",
   "compilerOptions": {
-    "declaration": true
-  }
+    "baseUrl": ".",
+    "strict": true,
+    "declaration": true,
+    "removeComments": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": [],
+  "compileOnSave": false
 }
