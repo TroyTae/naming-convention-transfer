@@ -3,7 +3,7 @@ const fs = require("fs-extra");
 const { terser } = require("rollup-plugin-terser");
 const { kebabToPascal } = require("./dist");
 
-const input = "src/index.ts";
+const input = "src/index.js";
 
 function createConfig({ pkg, input, format, file }) {
   return {
@@ -19,6 +19,7 @@ function createConfig({ pkg, input, format, file }) {
 }
 
 fs.emptyDirSync("./dist");
+fs.copyFileSync("./src/index.d.ts", "./dist/index.d.ts");
 
 module.exports = [
   createConfig({ pkg, input, format: "cjs", file: pkg.main }),
