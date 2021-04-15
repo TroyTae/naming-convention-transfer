@@ -1,10 +1,7 @@
-.idea
-.github
 .vscode
 .DS_Store
 
 src
-__tests__
 coverage
 node_modules
 
